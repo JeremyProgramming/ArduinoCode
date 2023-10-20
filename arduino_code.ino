@@ -48,14 +48,14 @@ Usage:
 //---------------------------------------------------------------------------------
 
 void setup() {
-	pinMode(moisturePower, OUTPUT); // Set the moisture pin to output
+  pinMode(moisturePower, OUTPUT); // Set the moisture pin to output
   pinMode(motorPin, OUTPUT); // Set the motor pin to output
 
-	Serial.begin(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
-	int moisture = readMoistureSensor(); // Read the moisture value
+  int moisture = readMoistureSensor(); // Read the moisture value
 
   // Compare the current moisture to the tipping point and check
   // if the moisture sensor is not in the air Add additional water 
@@ -76,11 +76,11 @@ void loop() {
 
 //  This function returns the humidity of the soil
 int readMoistureSensor() {
-	digitalWrite(moisturePower, HIGH);	// Turn the sensor ON
-	delay(10);							// Allow power to settle
+  digitalWrite(moisturePower, HIGH);	// Turn the sensor ON
+  delay(10);							// Allow power to settle
 
-	int humidity = analogRead(moisturePin);	// Read the value form the moisture sensor
-	digitalWrite(moisturePower, LOW);		// Turn the sensor OFF
+  int humidity = analogRead(moisturePin);	// Read the value form the moisture sensor
+  digitalWrite(moisturePower, LOW);		// Turn the sensor OFF
 	
   Serial.print("Moisture Value:");
   Serial.println(humidity);
