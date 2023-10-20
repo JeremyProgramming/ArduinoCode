@@ -80,6 +80,7 @@ int readMoistureSensor() {
   return humidity;							// Return analog moisture value
 }
 
+// This function powers on the motor
 void powerMotor() {
   Serial.println("Pumping water...");
   digitalWrite(motorPin,HIGH); // Turn on the motor
