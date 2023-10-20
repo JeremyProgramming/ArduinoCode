@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------
 /*
 Program:      Final Code for Arduino
-Author:       Jeremiah Kamidi
+Author:       JeremyProgramming
 Date:         18/10/2023
 Version:      3.0
 
